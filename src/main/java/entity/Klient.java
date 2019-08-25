@@ -1,6 +1,7 @@
 package entity;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
@@ -14,24 +15,21 @@ public class Klient {
     @Getter
     private Integer id_klient;
     @Column
+    @Setter
     private String imie;
     @Column
+    @Setter
     private String nazwisko;
     @Column
+    @Setter
     private String telefon;
 
     @OneToOne(mappedBy = "klient")
+    @Setter
     private Adres adres;
     @ManyToMany(mappedBy = "klienci")
     private List<Produkt> produkty;
 
     public Klient() {
-    }
-
-    public Klient(final String imie, final String nazwisko, final String telefon, final Adres adres) {
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.telefon = telefon;
-        this.adres = adres;
     }
 }

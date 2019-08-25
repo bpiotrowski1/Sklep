@@ -35,8 +35,10 @@ public class Produkt {
     public Produkt() {
     }
 
-    public Produkt(final String nazwa, final Integer cena, final Producent producent) {
+    public Produkt(final String nazwa, final Integer cena, final Producent producent_produktu, final Kategoria_produktu kategoria_produktu) {
         this.nazwa = nazwa;
         this.cena = cena;
+        this.producent_produktu = producent_produktu;
+        this.kategoria_produktu = kategoria_produktu;
     }
 }

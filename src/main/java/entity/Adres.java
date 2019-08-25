@@ -23,4 +23,16 @@ public class Adres {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_klienta", unique = true)
     private Klient klient;
+
+    public Adres() {
+    }
+
+    public Adres(final String ulica, final String numerdomu, final Integer nrmieszkania, final String kod_podcztowy, final String miejscowosc, final Klient klient) {
+        this.ulica = ulica;
+        this.numerdomu = numerdomu;
+        this.nrmieszkania = nrmieszkania;
+        this.kod_podcztowy = kod_podcztowy;
+        this.miejscowosc = miejscowosc;
+        this.klient = klient;
+    }
 }
